@@ -34,5 +34,12 @@ public class UserRegistration {
             System.out.println("valid Email ID");
         else
             System.out.println("Invalid Email ID");
+
+        Pattern pattern1 = Pattern.compile("^[+]91[0-9]{10}$");
+        Matcher matcher2 = pattern1.matcher("+917025862800");
+        if (matcher2.matches())
+            System.out.println("valid");
+        else
+            System.out.println("Invalid");
     }
 }
