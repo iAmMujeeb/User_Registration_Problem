@@ -28,7 +28,7 @@ public class UserRegistration {
 
         System.out.println("Enter Email ID");
         String emailId = scanner.next();
-        Pattern pattern = Pattern.compile("^abc.[a-z]*@bl.co.[a-z]*$");
+        Pattern pattern = Pattern.compile("^abc([.+-]?[0-9]{3})*[@][a-zA-Z0-9]{1,8}.[a-z]{3}.*([a-z]{2,3})*$");
         Matcher matcher = pattern.matcher(emailId);
         if (matcher.matches())
             System.out.println("valid Email ID");
