@@ -35,11 +35,22 @@ public class UserRegistration {
         else
             System.out.println("Invalid Email ID");
 
+        System.out.println("Enter Phone Number");
+        String phNum = scanner.next();
         Pattern pattern1 = Pattern.compile("^[+]91[0-9]{10}$");
-        Matcher matcher2 = pattern1.matcher("+917025862800");
-        if (matcher2.matches())
-            System.out.println("valid");
+        Matcher matcher1 = pattern1.matcher(phNum);
+        if (matcher1.matches())
+            System.out.println("valid Phone Number");
         else
-            System.out.println("Invalid");
+            System.out.println("Invalid Phone Number");
+
+        System.out.println("Enter Password");
+        String password = scanner.next();
+        Pattern pattern2 = Pattern.compile("^[0-9]{8}$");
+        Matcher matcher2 = pattern2.matcher(password);
+        if (matcher2.matches())
+            System.out.println("valid Password");
+        else
+            System.out.println("Invalid Password");
     }
 }
