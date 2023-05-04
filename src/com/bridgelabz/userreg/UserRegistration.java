@@ -25,5 +25,14 @@ public class UserRegistration {
         UserRegistration.checkValidity(lastName);
         if (UserRegistration.checkValidity(lastName)) System.out.println("Valid");
         else System.out.println("Invalid");
+
+        System.out.println("Enter Email ID");
+        String emailId = scanner.next();
+        Pattern pattern = Pattern.compile("^abc.[a-z]*@bl.co.[a-z]*$");
+        Matcher matcher = pattern.matcher(emailId);
+        if (matcher.matches())
+            System.out.println("valid Email ID");
+        else
+            System.out.println("Invalid Email ID");
     }
 }
