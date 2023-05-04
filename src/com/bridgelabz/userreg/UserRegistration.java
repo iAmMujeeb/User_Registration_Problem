@@ -17,11 +17,7 @@ public class UserRegistration {
         System.out.println("Enter First Name");
         String firstName = scanner.next();
         UserRegistration.checkValidity(firstName);
-        if(UserRegistration.checkValidity(firstName))
-            System.out.println("Valid");
-        else
-            System.out.println("Invalid");
-
-
+        if (UserRegistration.checkValidity(firstName)) System.out.println("Valid");
+        else System.out.println("Invalid");
     }
 }
